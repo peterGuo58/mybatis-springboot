@@ -10,7 +10,7 @@ public interface UserMapper {
 
 	List<User> getAll();
 
-	List<User> getList(UserParam userParam);
+	List<User> getList(UserParam userParam); //多条件分页查询
 
 	int getCount(UserParam userParam);
 
