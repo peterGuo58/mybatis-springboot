@@ -13,11 +13,9 @@ public class User implements Serializable {
 	private String passWord;
 	private UserSexEnum userSex;
 	private String nickName;
-
 	public User() {
 		super();
 	}
-
 	public User(String userName, String passWord, UserSexEnum userSex) {
 		super();
 		this.passWord = passWord;

@@ -16,7 +16,7 @@ import java.util.List;
 public class Page<E> implements Serializable {
     private static final long serialVersionUID = -2020350783443768083L;
 
-    private int currentPage = 1; //当前页数
+    private int currentPage = 0; //当前页数
     private long totalPage;       //总页数
     private long totalNumber;    //总记录数
     private List<E> list;        //数据集

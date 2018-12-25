@@ -6,15 +6,16 @@ import com.zq.springboot.mybatisdemo.mapper.UserMapper;
 import com.zq.springboot.mybatisdemo.model.User;
 import com.zq.springboot.mybatisdemo.param.UserParam;
 import com.zq.springboot.mybatisdemo.result.Page;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import javax.annotation.Resource;
+
 
 @RestController
 public class UserController {
 	
-	@Resource
+	@Autowired
 	private UserMapper userMapper;
 	
 	@RequestMapping("/getUsers")
@@ -30,7 +31,7 @@ public class UserController {
         Page page = new Page(userParam,count,users);
         return page;
     }
-	
+
     @RequestMapping("/getUser")
     public User getUser(Long id) {
     	User user=userMapper.getOne(id);

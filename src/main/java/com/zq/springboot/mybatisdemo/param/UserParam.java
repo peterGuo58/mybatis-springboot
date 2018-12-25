@@ -1,6 +1,5 @@
 package com.zq.springboot.mybatisdemo.param;
 
-//user 的查询条件参数类继承分页基础类：
 public class UserParam extends PageParam{
 
     private String userName;
